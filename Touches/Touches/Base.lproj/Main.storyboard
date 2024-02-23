@@ -20,6 +20,10 @@
                                 <rect key="frame" x="76" y="203" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="AFD-FV-lLt" appends="YES" id="E6A-be-I7u"/>
+                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -30,6 +34,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="AFD-FV-lLt">
+                    <connections>
+                        <action selector="longPressed:" destination="BYZ-38-t0r" id="icQ-xd-UUD"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="PSO-Sl-DSb"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="56" y="4"/>
         </scene>
